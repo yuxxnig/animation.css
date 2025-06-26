@@ -87,6 +87,11 @@ html, body {
     transform: translateX(-50%);
 }
 
+#visual .people img {
+    width: 300px;
+    height: auto;
+}
+
 #visual .text {
     width: 845px;
     height: 140px;
