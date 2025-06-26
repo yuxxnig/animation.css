@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-
+    
         <h1><img src="images/logo.png" alt=""></h1>
 
         <nav>
@@ -30,9 +30,9 @@
         <div class="people"><img src="images/people.png" alt="people"></div>
 
         <div class="playbtn">
-            <audio id="music/Coldplay - Coloratura (Official Lyric Video).mp4" controls></audio>
-            <img id="playbtn" src="images/btn_play.png" alt="플레이">
-            <img id="pausebtn" src="images/btn_pause.png" alt="일시중지">
+            <audio id=audio arc="music/Coldplay - Coloratura (Official Lyric Video).mp4" controls></audio>
+            <img id="playBtn" src="images/btn_play.png" alt="플레이">
+            <img id="pauseBtn" src="images/btn_pause.png" alt="일시중지">
         </div>
 
         <div class="text">
@@ -73,5 +73,31 @@
         </div>
 
     </div>
+<script>
+ const audio = document.getElementById('audio')
+  const playBtn = document.getElementById('playBtn')
+  const pauseBtn = document.getElementById('pauseBtn')
+
+  // 플레이 버튼 클릭 시
+  playBtn.addEventListener('click', () => {
+    audio.play()
+    playBtn.style.display = 'none'
+    pauseBtn.style.display = 'inline'
+  })
+
+  // 일시중지 버튼 클릭 시
+  pauseBtn.addEventListener('click', () => {
+    audio.pause()
+    pauseBtn.style.display = 'none'
+    playBtn.style.display = 'inline'
+  })
+
+  // 오디오가 끝났을 때 플레이 버튼 보여주기
+  audio.addEventListener('ended', () => {
+    pauseBtn.style.display = 'none'
+    playBtn.style.display = 'inline'
+  })
+</script>
+
 </body>
 </html>

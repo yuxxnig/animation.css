@@ -127,11 +127,12 @@ html, body {
 
 #visual .playbtn {
     position: absolute;
-    left: 42.5%;
-    top: 51%;
+    left: 49.5%;
+    top: 50%;
     transform: translate(-55%, 10%);
     width: 10px;
     height: 10px;
+    z-index: 10;
 }
 
 #visual .playbtn audio {
@@ -140,11 +141,11 @@ html, body {
     display: none;
 }
 
-#visual .playbtn img {
+#visual .playBtn img {
     cursor: pointer;
 }
 
-#visual .playbtn img#pausebtn {
+#visual .playbtn img#pauseBtn {
     display: none;
 }
 
